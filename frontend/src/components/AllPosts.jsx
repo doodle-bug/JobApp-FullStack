@@ -1,7 +1,7 @@
 import React from 'react'
 import DeleteIcon from '@mui/icons-material/Delete';
 import EditIcon from '@mui/icons-material/Edit';
-import SearchIcon from '@mui/icons-material/Edit';
+import SearchIcon from '@mui/icons-material/Search';
 
 import {
   Box,
@@ -32,10 +32,10 @@ const handleEdit = (id) => {
         const fetchInitialPosts = async () => {
             const response = await axios.get(`http://localhost:8080/jobPosts`);
             setPost(response.data);
-        }
-         fetchInitialPosts();
+        };
+
          if (query.length === 0) fetchInitialPosts();
-         if (query.length > 2) fetchPosts();
+         if (query.length >= 1) fetchPosts();
       }, [query]);
 
       const handleDelete = (id) => {
