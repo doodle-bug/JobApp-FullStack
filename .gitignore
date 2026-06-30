@@ -1,0 +1,10 @@
+# IntelliJ
+.idea/
+*.iml
+
+# Spring Boot (backend)
+backend/target/
+
+# React (frontend)
+frontend/node_modules/
+frontend/.env
